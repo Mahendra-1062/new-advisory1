@@ -87,3 +87,18 @@ def get_customer_details(user_id):
         "name": user.name,
         "email": user.email,
     }
+
+def create_order_without_email_validation(user_id, price, quantity):
+    user = get_user(user_id)
+
+    if user is None:
+        return None
+
+    total = calculate_total(price, quantity)
+
+    return {
+        "user_id": user.user_id,
+        "user_name": user.name,
+        "email": user.email,
+        "total": total
+    }
