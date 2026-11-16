@@ -1,6 +1,7 @@
 from user_service import get_user
 from user_service import format_user
 from user_service import validate_user
+from user_service import get_user_email
 
 from calculator import calculate_total
 from calculator import calculate_discount
@@ -87,3 +88,11 @@ def get_customer_details(user_id):
         "name": user.name,
         "email": user.email,
     }
+
+def print_customer_email(user_id):
+    email = get_user_email(user_id)
+
+    if email is None:
+        return "Email not available"
+
+    return email.lower()
