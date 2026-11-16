@@ -29,6 +29,9 @@ def validate_user(user):
     if not user.user_id or not user.email:
         return False
 
+    if "@" not in user.email:
+        return False
+
     return True
 
 
