@@ -49,4 +49,7 @@ def get_user_email(user_id):
     if not user:
         return None
 
-    return user.email
+    return {
+        "user_id": user.user_id,
+        "email": user.email
+    }
