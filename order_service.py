@@ -87,3 +87,11 @@ def get_customer_details(user_id):
         "name": user.name,
         "email": user.email,
     }
+
+def get_order_user_email(user_id):
+    user = get_user(user_id)
+
+    if user is None:
+        return "User not found"
+
+    return user.email
