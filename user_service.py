@@ -12,7 +12,12 @@ def get_user(user_id):
         3: User(3, "Charlie", "charlie@example.com"),
     }
 
-    return users.get(user_id)
+    user = users.get(user_id)
+
+    if user is None:
+        raise ValueError(f"User {user_id} not found")
+
+    return user
 
 
 def format_user(user):
