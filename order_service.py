@@ -39,6 +39,9 @@ def get_order_summary(user_id, price, quantity):
         "total": total,
     }
 
+def get_order_total(price, quantity):
+    return calculate_total(price, quantity)
+
 
 def apply_order_discount(user_id, price, quantity, discount_percentage):
     user = get_user(user_id)
