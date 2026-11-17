@@ -50,3 +50,11 @@ def get_user_email(user_id):
         return None
 
     return user.email
+
+def get_user_status(user_id):
+    user = get_user(user_id)
+
+    if not user:
+        return "inactive"
+
+    return "active"
