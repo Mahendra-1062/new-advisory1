@@ -87,3 +87,6 @@ def get_customer_details(user_id):
         "name": user.name,
         "email": user.email,
     }
+
+def get_customer_total(price, quantity):
+    return calculate_total(price, quantity)
