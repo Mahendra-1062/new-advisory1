@@ -1,4 +1,4 @@
-def calculate_total(price, quantity, tax_percentage):
+def calculate_total(price, quantity, tax_percentage=0):
     total = price * quantity
     return total + (total * tax_percentage / 100)
 
